@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from './Saudacao.module.css';
 
 function Saudacao(){
     //Criando estado de saudaçãoo
@@ -49,7 +50,7 @@ function Saudacao(){
     }
     
     return (
-        <h1>{saudacaoPeriodo}</h1>
+        <div className={styles.saudacao}>{saudacaoPeriodo}</div>
     )
 }
 
