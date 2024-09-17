@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import styles from './LateralImagens.module.css';
 
 function LateralImagens() {
   const [imagens, setImagens] = useState([]);
@@ -25,7 +26,7 @@ function LateralImagens() {
   }
 
   return (
-    <div>
+    <div className={styles.lateral}>
         {imagens.map((imagem)=>(
             <div key={imagem.id}>
                 <img src={imagem.caminho} alt={imagem.alt}/>
