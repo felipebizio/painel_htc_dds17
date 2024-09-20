@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react"
 import styles from './LateralImagens.module.css';
+import Loading from "../layout/Loading";
 
 function LateralImagens() {
   const [imagens, setImagens] = useState([]);
+  const [removeLoading, setRemoveLoadind] = useState(false);
   useEffect(()=>{
+    setTimeout(()=>{
     carregarImagens();
+  },3000);
   },[]);
 
   async function carregarImagens(){
@@ -32,6 +36,8 @@ function LateralImagens() {
                 <img src={imagem.caminho} alt={imagem.alt}/>
             </div>
         ))}
+        {!removeLoading && <Loading/>}
+      {removeLoading && imagens.length === 0 && <h1>Não há aulas disponíveis</h1>}
     </div>
   )
 }

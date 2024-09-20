@@ -7,6 +7,7 @@ import Cabecalho from '../layout/Cabecalho';
 import TabelaAulas from '../TabelaAulas/TabelaAulas';
 import LateralImagens from '../LateralImagens/LateralImagens';
 
+
 function Home() {
   return (
     <>
